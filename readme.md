@@ -67,7 +67,7 @@ extension Environment {
 var Current = Environment.live
 
 // 🎉 you can swap out your own mock implementation:
-Current.slackClient.send = { _, _ in throw SomeError("should not be called") }
+Current.slackClient.send = { _, _ in fatalError("should not be called") }
 ```
 
 ## Installation
