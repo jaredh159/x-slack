@@ -67,7 +67,7 @@ public extension Slack {
 
 // extensions
 
-extension Slack.Message {
+public extension Slack.Message {
   static func link(to url: String, withText text: String) -> String {
     "<\(url)|\(text)>"
   }
