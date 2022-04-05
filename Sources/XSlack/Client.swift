@@ -3,6 +3,12 @@ import XHttp
 public extension Slack {
   struct Client {
     public var send = send(_:token:)
+
+    public init() {}
+
+    public init(send: @escaping (Slack.Message, String) async -> String?) {
+      self.send = send
+    }
   }
 }
 
